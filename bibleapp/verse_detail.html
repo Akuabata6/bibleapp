@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Verse</title>
+</head>
+<body>
+    <h1>Verse: {{ verse.chapter }}:{{ verse.verse }}</h1>
+    <p>{{ verse.text }}</p>
+
+    {% if previous_verse %}
+        <p><strong>Previous Verse:</strong> {{ previous_verse.chapter }}:{{ previous_verse.verse }} - {{ previous_verse.text }}</p>
+    {% endif %}
+
+    {% if next_verse %}
+        <p><strong>Next Verse:</strong> {{ next_verse.chapter }}:{{ next_verse.verse }} - {{ next_verse.text }}</p>
+    {% endif %}
+</body>
+</html>
